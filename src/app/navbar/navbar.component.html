@@ -1,1 +1,22 @@
-<p>navbar works!</p>
+<div class="container-fluid my-1">
+    <nav class="navbar navbar-expand-lg bg-primary navbar-primary">
+        <a href="#" class="navbar-brand mx-5 text-light logo">Logo</a>
+        <form class="d-flex mx-5 align-item-center">
+            <input class="form-control search" type="search"  placeholder="Search" aria-label="Search">
+            <button class="btn btn-warning search1" type="submit">Search</button>
+          </form>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nikhil">
+            <span class="navbar-toggler-icon color-light"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="nikhil">
+            <ul class="navbar-nav d-flex me-5">
+                <li class="nav-list"><a [routerLink]="['/seller-auth/']" class="nav-link text-light"><i class="fa-solid fa-user mx-1"></i>Seller</a></li>
+                 <li class="nav-list"><a routerLink="" class="nav-link text-light"><i class="fa-solid fa-house mx-1"></i>Home</a></li>
+                  <li class="nav-list"><a [routerLink]="['unlock']" class="nav-link text-light"><i class="fa-solid fa-right-to-bracket mx-1"></i>Login</a></li>
+                   <li class="nav-list"><a [routerLink]="['login']" class="nav-link text-light"><i class="fa-solid fa-cart-shopping mx-1"></i>Cart</a></li>
+                   
+            </ul>
+        </div>
+
+    </nav>
+    </div>
