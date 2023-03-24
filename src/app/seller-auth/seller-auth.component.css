@@ -2,11 +2,18 @@
 {
     font-size: 20px;
     color: aliceblue;
+    text-decoration: underline;
+    font-weight:bold ;
+    text-transform: capitalize;
+    
 }
 .register
 {
     font-size: 20px;
     color: aliceblue;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: capitalize;
 }
 .img1
 {

@@ -1,0 +1,21 @@
+{
+  "seller": [
+    {
+      "name": "nikhil",
+      "password": "nikhil@123",
+      "email": "nikhilbankar7@gmail.com"
+    },
+    {
+      "name": "tejas",
+      "password": "te123",
+      "email": "te@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "swapnil",
+      "password": "swapnil123",
+      "email": "swapnil@gmail.com",
+      "id": 3
+    }
+  ]
+}
