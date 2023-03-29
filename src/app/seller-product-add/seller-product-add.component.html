@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <div class="card p-3 my-5 product">
+                <h3 class="my-1 text-center text-light">Add New Product</h3>
+          <form action="" class="form " [formGroup]="product">
+            <div class="form-group mb-2">
+              <label for="" class="form-label text-light">Enter Product Name:-</label>
+               <input type="text" name="productName" placeholder="Enter product name" formControlName="productName" class="form-control" id="">
+            </div>
+            <div class="form-group mb-2">
+              <label for="" class="form-label text-light">Enter Product Price:-</label>
+               <input type="text" name="productPrice" placeholder="Enter Product Price" formControlName="productPrice" class="form-control" id="">
+            </div>
+            <div class="form-group mb-2">
+                <label for="" class="form-label text-light">Enter Product Color:-</label>
+                 <input type="text" name="productColor" placeholder="Enter Product Color" formControlName="productColor" class="form-control" id="">
+              </div>
+              <div class="form-group mb-2">
+                <label for="" class="form-label text-light">Enter Product Category:-</label>
+                 <input type="text" name="productCategory" placeholder="Enter Product Category" formControlName="productCategory" class="form-control" id="">
+              </div>
+              <div class="form-group mb-2">
+                <label for="" class="form-label text-light">Enter Product Description:-</label>
+                 <textarea type="text" name="productDescription" placeholder="Enter Product Description" formControlName="productDescription" class="form-control" id=""></textarea>
+              </div>
+            <div class="form-group mb-2">
+              <label for="" class="form-label text-light">Enter Product Image Url:-</label>
+               <input type="email" name="image" placeholder="Enter Product Image Url" formControlName="image" class="form-control " id="">
+            </div>
+            <div class="form-group mb-2">
+             <button class="btn btn-success" (click)="submit(product.value)">Submit</button>
+            </div>
+          </form>
+              </div>
+              </div>
+             </div>
+        </div>
+    

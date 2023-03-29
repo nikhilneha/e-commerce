@@ -10,6 +10,8 @@ export class NavbarComponent implements OnInit {
 
   navType:string='default'
 
+
+  sellerName:string=''
   constructor(private router:Router){}
 
   ngOnInit(): void {
@@ -17,9 +19,13 @@ export class NavbarComponent implements OnInit {
         if(res.url)
         {
           if(localStorage.getItem('seller') && res.url.includes('seller'))
-          {
-              this.navType='seller'
-          }
+          {  
+            let StoreSellerValue=localStorage.getItem('seller');
+            let setSellerValue= StoreSellerValue && JSON.parse(StoreSellerValue)[0]
+             this.sellerName=setSellerValue.name
+
+             this.navType='seller'
+        }
           else{
             this.navType='default'
           }

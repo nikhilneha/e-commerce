@@ -46,6 +46,41 @@
       "password": "",
       "email": "",
       "id": 8
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "productName": "samsung",
+      "productPrice": "23000",
+      "productColor": "black",
+      "productCategory": "mobile",
+      "productDescription": "mobile added",
+      "image": "https://media.istockphoto.com/id/1217881331/photo/man-holding-in-hands-samsung-galaxy-s20-ultra-closeup.jpg?s=612x612&w=0&k=20&c=BhMtzBJQC-D5jNfYfb6vIr4K7vV4INyZ7UzWXkI51EE=",
+      "id": 1
+    },
+    {
+      "productName": "Oppo",
+      "productPrice": "24499",
+      "productColor": "silver",
+      "productCategory": "mobile",
+      "productDescription": "Oppo Mobile Added",
+      "image": "https://media.istockphoto.com/id/1316898065/photo/oppo-find-x3-pro.jpg?s=612x612&w=0&k=20&c=hpI5oPO6AMz1Xfv6UveSXVkgj2AW7r90u8ce3HKGJVg=",
+      "id": 2
+    },
+    {
+      "productName": "Hp",
+      "productPrice": "55999",
+      "productColor": "black",
+      "productCategory": "Laptop",
+      "productDescription": "Hp Laptop Added",
+      "image": "https://media.istockphoto.com/id/498569393/photo/windows-8-1-on-hp-pavilion-ultrabook.jpg?s=612x612&w=0&k=20&c=kmqDUy2J3YpPwp3vVJCIZnidDFc9BvYPWDD0Vnf4GzQ=",
+      "id": 4
     }
   ]
 }

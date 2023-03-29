@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SellerService } from './seller.service';
+import { SellerProductAddComponent } from './seller-product-add/seller-product-add.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SellerService } from './seller.service';
     NavbarComponent,
     HomeComponent,
     SellerAuthComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+    SellerProductAddComponent
   ],
   imports: [
     BrowserModule,

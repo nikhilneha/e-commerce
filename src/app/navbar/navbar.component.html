@@ -21,9 +21,9 @@
                    
             </ul>
             <ul class="navbar-nav d-flex me-5" *ngSwitchCase="'seller'">
-                <li class="nav-list"><a  class="nav-link text-light"><i class="fa-solid fa-user mx-1"></i>SellerName</a></li>
-                 <li class="nav-list"><a  class="nav-link text-light">Add Product</a></li>
-                  <li class="nav-list"><a  class="nav-link text-light">Product List</a></li>
+                <li class="nav-list"><a  class="nav-link text-light"><i class="fa-solid fa-user mx-1"></i>{{sellerName|titlecase}}</a></li>
+                 <li class="nav-list"><a [routerLink]="['/seller-product-add/']" class="nav-link text-light">Add Product</a></li>
+                  <li class="nav-list"><a [routerLink]="['/seller-home']" class="nav-link text-light">Product List</a></li>
                    <li class="nav-list"><a (click)="logout()" class="nav-link text-light">Logout</a></li>
                    
             </ul>
