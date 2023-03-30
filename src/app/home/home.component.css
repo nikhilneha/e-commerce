@@ -1,0 +1,45 @@
+.welcome
+{
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px gray;
+    background:linear-gradient(cadetblue,darksalmon);
+}
+.ecart
+{
+    font-size: 45px;
+}
+.lowest
+{
+  font-size: 40px;
+  font-weight: bold;
+  word-spacing:2px ;
+  letter-spacing: 1px;
+}
+.fa-truck
+{
+    color: green;
+    font-size: 20px;
+}
+.fa-sack-dollar
+{
+    color: green;
+    font-size: 20px;
+}
+.fa-right-left
+{
+    color: green;
+    font-size: 20px;
+}
+.image
+{
+    width: 250px;
+    height: 150px;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+.detail
+{
+    background-color: teal;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 5px;
+}

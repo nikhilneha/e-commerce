@@ -15,16 +15,22 @@ export class SellerHomeComponent implements OnInit {
  
   ngOnInit():void
   {
-   this.prodServe.listProduct().subscribe((res)=>{
-    console.log(res)
-    this.addProduct=res
-  })
+   this.listProduct()
   
   }
 
   delProduct(id:number)
   {
+    alert('Product is successfully deleted')
     this.prodServe.deleteProduct(id).subscribe((res)=>console.log(res))
+    this.listProduct()                                              //To refresh the page after delete
+  }
+  listProduct()
+  {
+    this.prodServe.listProduct().subscribe((res)=>{
+      console.log(res)
+      this.addProduct=res
+    })
   }
 
 }

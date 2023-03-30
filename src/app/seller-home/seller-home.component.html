@@ -22,7 +22,8 @@
         <td class="text-light">{{list.productPrice}}</td>
         <td class="text-light">{{list.productColor}}</td>
         <td class="text-light">{{list.productDescription}}</td>
-        <td><button type="button" class="mx-1" (click)="delProduct(list.id)"><i class="fa-solid fa-trash"></i></button> <button type="button"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button></td>
+        <td><button type="button" class="mx-1" (click)="delProduct(list.id)"><i class="fa-solid fa-trash"></i></button>
+           <button type="button" ><i class="fa-sharp fa-solid fa-pen-to-square" [routerLink]="['/seller-update-product/'+list.id]"></i></button></td>
       </tr>
      
     </tbody>
