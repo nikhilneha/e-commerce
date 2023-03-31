@@ -22,8 +22,20 @@ export class ProductService {
   {
     return this.http.delete(`http://localhost:3000/products/${id}`)
   }
-  updateProduct(id:number)
+  getProductById(id:number)
   {
      return this.http.get(`http://localhost:3000/products/${id}`)
+  }
+  updateProduct(data:product)
+  {
+    return this.http.put(`http://localhost:3000/products/${data.id}`,data)
+  }
+  fewProductAdd()
+  {
+    return this.http.get('http://localhost:3000/products?_limit=3');
+  }
+  latestProducts()
+  {
+    return this.http.get('http://localhost:3000/products?_limit=12');
   }
 }

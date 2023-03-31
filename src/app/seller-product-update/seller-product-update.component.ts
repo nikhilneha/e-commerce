@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { product } from '../data-type';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ProductService } from '../product.service';
 })
 export class SellerProductUpdateComponent implements OnInit {
 
-  constructor(private activateRoute:ActivatedRoute, private prodServe:ProductService){
+  constructor(private activateRoute:ActivatedRoute, private prodServe:ProductService, private router:Router){
   }
 
   updatePro:any
@@ -25,17 +26,24 @@ export class SellerProductUpdateComponent implements OnInit {
     id:new FormControl()
   })
 
- productUpdate() 
+ productEdit() 
  {
-  this.prodServe.updateProduct(this.activateRoute.snapshot.params['id']).subscribe((res)=>{
+  this.prodServe.getProductById(this.activateRoute.snapshot.params['id']).subscribe((res)=>{
     console.log(res);
     this.product.setValue(res)
 
   })
  }
+ productUpdate(data:product)
+ {
+  this.prodServe.updateProduct(this.product.value).subscribe((res)=>{
+     alert("Product Update Successfully")
+     this.router.navigate(['seller-home'])
+  })
+ }
 
   ngOnInit():void
   {
-    this.productUpdate()
+    this.productEdit()
   }
 }

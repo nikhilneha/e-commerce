@@ -66,7 +66,7 @@
       "productPrice": "23000",
       "productColor": "black",
       "productCategory": "mobile",
-      "productDescription": "mobile added",
+      "productDescription": "6gb Ram,128gb Internal",
       "image": "https://media.istockphoto.com/id/1217881331/photo/man-holding-in-hands-samsung-galaxy-s20-ultra-closeup.jpg?s=612x612&w=0&k=20&c=BhMtzBJQC-D5jNfYfb6vIr4K7vV4INyZ7UzWXkI51EE=",
       "id": 1
     },
@@ -78,6 +78,96 @@
       "productDescription": "8gb Ram, 128gb internal sotrage",
       "image": "https://cdn.pixabay.com/photo/2019/08/22/12/09/coffee-4423348__340.jpg",
       "id": 2
+    },
+    {
+      "productName": "Hp",
+      "productPrice": "55999",
+      "productColor": "silver",
+      "productCategory": "Laptop",
+      "productDescription": "16gb Ram, 256gb Internal Storage",
+      "image": "https://cdn.pixabay.com/photo/2018/07/11/11/14/ecommerce-3530785__340.jpg",
+      "id": 3
+    },
+    {
+      "productName": "Apple",
+      "productPrice": "254999",
+      "productColor": "silver",
+      "productCategory": "Laptop",
+      "productDescription": "24gb Ram, 256gb Internal Storage",
+      "image": "https://cdn.pixabay.com/photo/2016/11/23/14/50/apple-1853337__340.jpg",
+      "id": 4
+    },
+    {
+      "productName": "Lipstic Combo",
+      "productPrice": "299/-",
+      "productColor": "Multicolour",
+      "productCategory": "Lipstick",
+      "productDescription": "It is a very nice combo product to buy at this price",
+      "image": "https://cdn.pixabay.com/photo/2017/10/07/23/00/lipstick-2828223__340.jpg",
+      "id": 5
+    },
+    {
+      "productName": "Sports Shoes",
+      "productPrice": "599/-",
+      "productColor": "Red",
+      "productCategory": "Shoes",
+      "productDescription": "Very light weight sport running shoes ",
+      "image": "https://cdn.pixabay.com/photo/2014/06/18/18/41/running-shoe-371624__340.jpg",
+      "id": 6
+    },
+    {
+      "productName": "Smartwatch Combo",
+      "productPrice": "2499?-",
+      "productColor": "Multicolor",
+      "productCategory": "Smartwatch",
+      "productDescription": "These are newly launched smartwatch combo at very affordable price",
+      "image": "https://cdn.pixabay.com/photo/2016/03/09/13/47/running-watch-1246430__340.png",
+      "id": 7
+    },
+    {
+      "productName": "Sony DSLR Camera",
+      "productPrice": "54999/-",
+      "productColor": "Black",
+      "productCategory": "Camera",
+      "productDescription": "Newly launched sony dslr s-40 camera",
+      "image": "https://cdn.pixabay.com/photo/2014/10/31/10/01/camera-510530__340.jpg",
+      "id": 8
+    },
+    {
+      "productName": "College Bag",
+      "productPrice": "599/-",
+      "productColor": "Red/Grey",
+      "productCategory": "Bag",
+      "productDescription": "Quality product",
+      "image": "https://cdn.pixabay.com/photo/2016/04/12/14/31/backpack-1324445__340.jpg",
+      "id": 9
+    },
+    {
+      "productName": "Nike Shoes",
+      "productPrice": "2299/-",
+      "productColor": "Navy Blue",
+      "productCategory": "Shoes",
+      "productDescription": "Very light in weight",
+      "image": "https://cdn.pixabay.com/photo/2016/10/26/17/52/shoe-1772074__340.jpg",
+      "id": 10
+    },
+    {
+      "productName": "Toy Car",
+      "productPrice": "2699/-",
+      "productColor": "multicolor",
+      "productCategory": "Toy",
+      "productDescription": "Remote Used Car",
+      "image": "https://cdn.pixabay.com/photo/2017/08/03/23/44/monster-truck-2578686__340.jpg",
+      "id": 11
+    },
+    {
+      "productName": "Sony Camera Lense",
+      "productPrice": "34599/-",
+      "productColor": "Black",
+      "productCategory": "Camera Lense",
+      "productDescription": "225mp lense",
+      "image": "https://cdn.pixabay.com/photo/2014/10/31/10/01/lens-510529__340.jpg",
+      "id": 12
     }
   ]
 }

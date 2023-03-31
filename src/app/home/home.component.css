@@ -6,14 +6,19 @@
 }
 .ecart
 {
-    font-size: 45px;
+    font-size: 35px;
 }
 .lowest
 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   word-spacing:2px ;
   letter-spacing: 1px;
+}
+.local
+{
+    height: 200px;
+    width: 500px;
 }
 .fa-truck
 {
@@ -30,16 +35,42 @@
     color: green;
     font-size: 20px;
 }
+.popularProd
+{
+    height: 70px;
+    background:linear-gradient(to right,silver,darkred) ;
+    border-radius: 40px 5px 40px 5px;
+}
+.popular
+{
+    font-size: 50px;
+    font-weight: bold;
+    color: yellowgreen;
+}
 .image
 {
-    width: 250px;
+    width: 150px;
     height: 150px;
-    padding-left: 60px;
-    padding-top: 10px;
+    align-self: center;
 }
 .detail
 {
-    background-color: teal;
     box-shadow: 0px 0px 10px gray;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.view
+{
+    background-color: lightcoral;
+    border-radius: 10px;
+    color: blue;
+    height: 35px;
+}
+.cart
+{
+    background-color: lightgreen;
+    border-radius: 10px;
+    color: red;
+    height: 35px;
 }
