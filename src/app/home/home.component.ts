@@ -9,8 +9,8 @@ import { product } from '../data-type';
 })
 export class HomeComponent implements OnInit {
 
-  popularProduct:any | product[]
-  newProduct:any | product[]
+  popularProduct:any
+  newProduct:any
   constructor(private prodServe:ProductService){}
 
 ngOnInit(): void {

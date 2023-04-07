@@ -27,7 +27,6 @@ export class SellerProductAddComponent {
     this.prodServ.addProduct(this.product.value).subscribe((res)=>{
       alert("Product Added Successfully")
       this.router.navigate(['seller-home'])
-
     })
   }
 

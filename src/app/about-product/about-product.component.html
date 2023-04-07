@@ -1,0 +1,26 @@
+<div class="container-fluid main">
+    <div class="row p-5" *ngIf="seeProduct">
+        <div class="col-sm-6">
+            <img class="prodImg" src="{{seeProduct.image}}" alt="">
+        </div>
+        <div class="col-sm-6">
+         <div class="prodDetail">
+            <h1>Name:-{{seeProduct.productName}}</h1>
+            <h1>Price:-{{seeProduct.productPrice}}</h1>
+            <div class="color">
+                Color:-
+                <h4 [style.backgroundColor]="seeProduct.productColor" class="prodColor"></h4>
+            </div>
+            <h5>Category:-{{seeProduct.productCategory}}</h5>
+            <h5>Description:-{{seeProduct.productDescription}}</h5>
+            <button class="cart">Add to Cart</button>
+            <button class="m-3 buy">Buy Now</button>
+            <div class="quantity">
+              <button (click)="decIncQuantity('minus')">-</button>
+              <input type="text" value="{{quantity}}" name="" id="">
+              <button (click)="decIncQuantity('plus')">+</button>
+            </div>
+         </div>
+        </div>
+    </div>
+</div>

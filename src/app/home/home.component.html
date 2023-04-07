@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6" >
+        <div class="col-md-10 mx-2" >
             <div id="carouselExampleControls" class="carousel slide m-3" data-bs-ride="carousel" >
                 <div class="carousel-inner"*ngIf="popularProduct" >
                   <div class="carousel-item active " *ngFor="let list of popularProduct">
-                    <img src="{{list.image}}" class="d-block w-100" alt="...">
-               </div>
+                    <a [routerLink]="['/about-product/'+list.id]"> <img src="{{list.image}}" class="d-block w-100 carImage" alt="...">
+              </a> </div>
                    </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -18,7 +18,7 @@
               </div>
         </div>
         
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
             <div class="welcome m-3">
                 <h1 class="text-center text-danger ecart p-3">Welcome to Ecart</h1>
                 <h1 class="lowest mx-5">Lowest Price <br> Best Quality Products</h1>
@@ -27,11 +27,11 @@
                      <span><i class="fa-sharp fa-solid fa-right-left"></i> Easy Returns</span></h4>
                      <img class="mx-5 local" src="https://cdn.pixabay.com/photo/2014/10/28/22/19/supermarket-507295__340.jpg" alt="">
             </div>
-            </div>
+            </div> -->
       </div>
-      <div class="row mt-5">
+      <div class="row mt-2">
         <div class="col-md-11 popularProd mx-5">
-          <h1 class="text-center popular pt-3">Popular Products </h1>
+          <h1 class="popular pt-5">Popular Products </h1>
         </div>
       </div>
     <div class="row mt-5">
@@ -45,8 +45,9 @@
           <h4 class="px-5 text-light">Price:- ₹{{list.productPrice}} </h4>
          </div>
          <div class="searchForMore">
-          <button type="submit" class="mx-4 view">Buy Now</button>
-          <button type="Submit" class="mx-4 cart">Add To Cart</button>
+          <a [routerLink]="['/about-product/'+list.id]" class="mx-2 view">View Detail</a>
+          <button type="submit" class="mx-2 buy">Buy Now</button>
+          <button type="Submit" class="mx-2 cart">Add To Cart</button>
          </div>
         </div>
       </div>

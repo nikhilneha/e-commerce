@@ -1,0 +1,31 @@
+<div class="container" >
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="card p-3 my-5 bg-danger">
+                <h3 class="my-1 text-center register">Register Here</h3>
+          <form action="" class="form" [formGroup]="register">
+            
+            <div class="form-group mb-2">
+              <label for="" class="form-label text-light">Name:-</label>
+               <input type="text" name="name" placeholder="Enter your name" formControlName="name" class="form-control" id="">
+            </div>
+            <div class="form-group mb-2">
+              <label for="" class="form-label text-light">Password:-</label>
+               <input type="password" name="password" placeholder="Enter your choice Password" formControlName="password" class="form-control" id="">
+            </div>
+            <div class="form-group mb-2">
+              <label for="" class="form-label text-light">Email:-</label>
+               <input type="email" name="email" placeholder="Enter your email" formControlName="email" email class="form-control " id="">
+            </div>
+            <div class="form-group mb-2">
+             <button class="btn btn-success" (click)="signUp(register.value)">Sign-Up</button>
+            </div>
+            <h4 class="my-1 text-light">Already have an account?<a  class="mx-1">Login</a></h4>
+          </form>
+              </div>
+              </div>
+               <div class="col-lg-6 my-5">
+                  <img src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_960_720.jpg" alt="" class="img-fluid rounded img1">
+              </div>
+        </div>
+    </div>

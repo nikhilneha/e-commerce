@@ -44,11 +44,8 @@ openSignUp()
 {
   this.showLogin=false
 }
-
-
-  
   ngOnInit(): void {
 
-    
+    this.selServe.reloadSeller()
   }
 }

@@ -1,0 +1,17 @@
+<div class="container-fluid searchDetail">
+    <div class="row pt-5 allProduct" >
+        <div class="col-md-3" *ngFor="let list of result">
+            <div>
+          <a [routerLink]="['/about-product/'+list.id]">
+               <img class="imgSize mx-1" src="{{list.image}}" alt="">
+          </a>
+        </div>
+        <div class="prodDetail">
+            <a [routerLink]="['/about-product/'+list.id]"> <h5>Product Name:-{{list.productName}}</h5></a>
+            <h6>Price:-{{list.productPrice}}</h6>
+            <h6>Color:-{{list.productColor}}</h6>
+            <h6>Category:-{{list.productCategory}}</h6>
+        </div>
+        </div>
+    </div>
+</div>

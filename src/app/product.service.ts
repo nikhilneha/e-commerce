@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { product } from './data-type';
+import { query } from '@angular/animations';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class ProductService {
   {
     return this.http.delete(`http://localhost:3000/products/${id}`)
   }
-  getProductById(id:number)
+  getProductById(id:string)
   {
      return this.http.get(`http://localhost:3000/products/${id}`)
   }
@@ -37,5 +38,10 @@ export class ProductService {
   latestProducts()
   {
     return this.http.get('http://localhost:3000/products?_limit=12');
+  }
+
+  searchProduct(query:string)
+  {
+    return this.http.get(`http://localhost:3000/products?q=${query}`)
   }
 }

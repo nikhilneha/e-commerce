@@ -8,6 +8,10 @@
 {
     font-size: 35px;
 }
+.carImage
+{
+    height: 500px;
+}
 .lowest
 {
   font-size: 30px;
@@ -18,7 +22,7 @@
 .local
 {
     height: 200px;
-    width: 500px;
+    width: 400px;
 }
 .fa-truck
 {
@@ -35,16 +39,12 @@
     color: green;
     font-size: 20px;
 }
-.popularProd
-{
-    height: 70px;
-    background:linear-gradient(to right,silver,darkred) ;
-    border-radius: 40px 5px 40px 5px;
-}
+
 .popular
 {
     font-size: 50px;
     font-weight: bold;
+    text-align: center;
     color: yellowgreen;
 }
 .image
@@ -59,8 +59,14 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    
 }
 .view
+{
+    color: white;
+    font-weight: bold;
+}
+.buy
 {
     background-color: lightcoral;
     border-radius: 10px;
