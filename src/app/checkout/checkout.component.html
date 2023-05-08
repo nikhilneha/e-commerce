@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="text-center my-3">Checkout</h1>
+    <div class="row">
+        <div class="col-sm-7">
+            <h3 class="text-center my-2">Add Shipping Adress</h3>
+            <form class="form" [formGroup]="orderProd">
+                <div class="form-group mb-2">
+                    <label for="" class="form-label">Name:-</label>
+                     <input type="email" name="email" placeholder="Enter your email" formControlName="email" class="form-control" id="">
+                     <!-- <span class="text-danger" *ngIf="register.get('name')?.invalid && register.get('name')?.touched">Invalid Name</span> -->
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="" class="form-label">Adress:-</label>
+                     <textarea type="text" name="adress" placeholder="Enter your adress" formControlName="adress" class="form-control" id=""></textarea>
+                     <!-- <span class="text-danger" *ngIf="register.get('name')?.invalid && register.get('name')?.touched">Invalid Name</span> -->
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="" class="form-label">Contact:-</label>
+                     <input type="number" name="contact" placeholder="Enter your mobile number" formControlName="contact" class="form-control" id="">
+                     <!-- <span class="text-danger" *ngIf="register.get('name')?.invalid && register.get('name')?.touched">Invalid Name</span> -->
+                  </div>
+                  <div class="form-group mb-2">
+                    <button class="btn btn-success" (click)="orderNow(orderProd.value)">Order Now</button>
+                   </div>
+            </form>
+        </div>
+        <div class="col-sm-5">
+            <h3 class="text-center my-2">Total Amount: <b>{{totalPrice}}</b></h3>
+            <h4 class="text-center">Payment Method: <b>Cash On Delivery</b></h4>
+        </div>
+    </div>
+</div>

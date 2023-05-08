@@ -45,7 +45,7 @@
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    color: yellowgreen;
+    color: black;
 }
 .image
 {
@@ -63,7 +63,7 @@
 }
 .view
 {
-    color: white;
+    color: gray;
     font-weight: bold;
 }
 .buy
@@ -80,3 +80,4 @@
     color: red;
     height: 35px;
 }
+

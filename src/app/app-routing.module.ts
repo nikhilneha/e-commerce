@@ -9,6 +9,9 @@ import { SellerProductUpdateComponent } from './seller-product-update/seller-pro
 import { SearchComponent } from './search/search.component';
 import { AboutProductComponent } from './about-product/about-product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { MyCartComponent } from './my-cart/my-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 const routes: Routes = [
   {
@@ -34,7 +37,16 @@ const routes: Routes = [
   },
   {
     path:'user-auth', component:UserAuthComponent
-  }
+  },
+ {
+  path:"my-cart", component:MyCartComponent
+ },
+ {
+  path:"checkout", component:CheckoutComponent
+ },
+ {
+  path:"my-orders", component:MyOrdersComponent
+ }
 ];
 
 @NgModule({

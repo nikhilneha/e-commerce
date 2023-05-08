@@ -2,3 +2,14 @@
 {
     background: linear-gradient(to right,yellowgreen,skyblue);
 }
+
+input.ng-invalid.ng-touched
+{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset red;
+}
+input.ng-valid.ng-touched
+{
+    border: 1px solid green;
+    box-shadow: 0 0 15px inset rgb(17, 75, 17);
+}

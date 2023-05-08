@@ -1,7 +1,11 @@
+input
+{
+    border-color: purple;
+}
 .login
 {
-    font-size: 20px;
-    color: aliceblue;
+    font-size: 22px;
+    color: rebeccapurple;
     text-decoration: underline;
     font-weight:bold ;
     text-transform: capitalize;
@@ -9,8 +13,8 @@
 }
 .register
 {
-    font-size: 20px;
-    color: aliceblue;
+    font-size: 22px;
+    color: rebeccapurple;
     font-weight: bold;
     text-decoration: underline;
     text-transform: capitalize;
@@ -22,4 +26,14 @@
 .img2
 {
     height: 330px;
+}
+input.ng-invalid.ng-touched
+{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset red;
+}
+input.ng-valid.ng-touched
+{
+    border: 1px solid green;
+    box-shadow: 0 0 15px inset rgb(17, 75, 17);
 }

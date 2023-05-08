@@ -11,7 +11,8 @@ export class SellerHomeComponent implements OnInit {
 
   constructor(private prodServe:ProductService){}
 
-  addProduct:any 
+  addProduct: undefined | product[] 
+
  
   ngOnInit():void
   {
@@ -34,3 +35,5 @@ export class SellerHomeComponent implements OnInit {
   }
 
 }
+
+

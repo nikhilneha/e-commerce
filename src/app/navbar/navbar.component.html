@@ -1,8 +1,8 @@
 
-    <nav class="navbar navbar-expand-lg tool">
+    <nav class="navbar navbar-expand-lg  tool">
         <div class="container-fluid my-1">
         <a routerLink="" class="navbar-brand mx-5 logo">E-Cart</a>
-        <form class="d-flex mx-5 align-item-center" *ngIf="navType==='default'">
+        <form class="d-flex mx-5" *ngIf="navType!='seller'">
             
             <input class="form-control search" type="search" #searchInput (keyup)="productSearch($event)" (blur)="hideSearch()" placeholder="Search" aria-label="Search">
             <button class="btn btn-warning search1" type="submit" (click)="searchAll(searchInput.value)">Search</button>
@@ -19,7 +19,16 @@
                 <li class="nav-list"><a [routerLink]="['/seller-auth/']" class="nav-link text-light"><i class="fa-solid fa-user mx-1"></i>Seller</a></li>
                  <li class="nav-list"><a routerLink="" class="nav-link text-light"><i class="fa-solid fa-house mx-1"></i>Home</a></li>
                   <li class="nav-list"><a [routerLink]="['/user-auth/']" class="nav-link text-light"><i class="fa-solid fa-right-to-bracket mx-1"></i>Login</a></li>
-                   <li class="nav-list"><a [routerLink]="['login']" class="nav-link text-light"><i class="fa-solid fa-cart-shopping mx-1"></i>Cart(0)</a></li>
+                   <li class="nav-list"><a [routerLink]="['']" class="nav-link text-light"><i class="fa-solid fa-cart-shopping mx-1"></i>Cart({{cartItem}})</a></li>
+                   
+            </ul>
+            <ul class="navbar-nav d-flex me-5" *ngSwitchCase="'user'">
+                <li class="nav-list"><a [routerLink]="['/seller-auth/']" class="nav-link text-light"><i class="fa-solid fa-user mx-1"></i>Seller</a></li>
+                <li class="nav-list"><a [routerLink]="['/user-auth/']" class="nav-link text-light"><i class="fa-solid fa-user mx-1"></i>{{userName | titlecase}}</a></li>
+                <li class="nav-list"><a [routerLink]="['/my-orders/']" class="nav-link text-light">My Order</a></li>
+                 <li class="nav-list"><a routerLink="" class="nav-link text-light"><i class="fa-solid fa-house mx-1"></i>Home</a></li>
+                  <li class="nav-list"><a [routerLink]="['/user-auth/']" class="nav-link text-light" (click)="userLogout()">Logout</a></li>
+                   <li class="nav-list"><a [routerLink]="cartItem>0?['/my-cart']:null" class="nav-link text-light"><i class="fa-solid fa-cart-shopping mx-1"></i>Cart({{cartItem}})</a></li>
                    
             </ul>
             <ul class="navbar-nav d-flex me-5" *ngSwitchCase="'seller'">
@@ -29,8 +38,46 @@
                    <li class="nav-list"><a (click)="logout()" class="nav-link text-light">Logout</a></li>
                    
             </ul>
+            
             </div>
         </div>
 </div>
     </nav>
     
+
+
+      
+      
+      
+      
+      
+      <!-- 
+      <mat-toolbar class=" navbar-expand-md" color="basic">
+         <mat-toolbar-row >
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-sm-2 col-md-4 col-lg-7 m-auto ">
+                          <button mat-icon-button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar"><mat-icon>menu</mat-icon></button>
+                          <a  class="" color="Basic" >
+                            <span >E-commerce:)</span>
+                          </a>
+                  </div>
+                  <div class="col-sm-10 col-md-8 col-lg-5 size ">
+                      <mat-form-field class=" width" appearance="fill">
+                          <mat-label>search</mat-label>
+                             <input matInput class="" >
+                             <mat-icon matSuffix><a href="" class="text-decoration-none"> search </a></mat-icon>
+                    </mat-form-field>
+                  </div>
+              </div>
+             </div>
+         </mat-toolbar-row>
+            <mat-toolbar-row class="navbar-collapse collapse justify-content-center h-50" id="mynavbar">
+                <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home">HOME</a>
+                <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="seller">SELLER</a>
+                <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" href="selleraccount">SELAcc</a>
+                <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button color="basic" routerLink="home" >LOGIN/SIGNUP</a>
+                <a class="mx-md-2 mx-sm-1 m-auto" mat-flat-button matBadge="0" matBadgeColor="warn" color="basic" routerLink="home">CART</a>
+            </mat-toolbar-row>
+          </mat-toolbar>  -->
+      

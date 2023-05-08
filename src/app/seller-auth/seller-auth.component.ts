@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import login, { SignUp } from '../data-type';
 import { SellerService } from '../seller.service';
@@ -14,14 +14,14 @@ export class SellerAuthComponent implements OnInit {
 showLogin=false;
 
 register:FormGroup=new FormGroup({
-  name:new FormControl(''),
-  password:new FormControl(''),
-  email:new FormControl('')
+  name:new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(9)]),
+  password:new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]),
+  email:new FormControl('',[Validators.required,Validators.email])
 })
 
 login:FormGroup=new FormGroup({
-  email:new FormControl(''),
-  password:new FormControl('')
+  email:new FormControl('',[Validators.required,Validators.email]),
+  password:new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(12)])
 })
 
 constructor(private selServe:SellerService, private router:Router){}
@@ -49,3 +49,6 @@ openSignUp()
     this.selServe.reloadSeller()
   }
 }
+
+
+

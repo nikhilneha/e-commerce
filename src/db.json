@@ -12,61 +12,19 @@
       "id": 2
     },
     {
-      "name": "swapnil",
-      "password": "swapnil123",
-      "email": "swapnil@gmail.com",
+      "name": "abc",
+      "password": "abc123",
+      "email": "abc@gmail.com",
       "id": 3
-    },
-    {
-      "name": "swapnil",
-      "password": "swapnil123",
-      "email": "swapnil@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "",
-      "password": "",
-      "email": "",
-      "id": 5
-    },
-    {
-      "name": "dd",
-      "password": "asdfgh",
-      "email": "aer@gmail.com",
-      "id": 6
-    },
-    {
-      "name": "dd",
-      "password": "wertyu",
-      "email": "dd@gmail.com",
-      "id": 7
-    },
-    {
-      "name": "",
-      "password": "",
-      "email": "",
-      "id": 8
-    },
-    {
-      "name": "",
-      "password": "",
-      "email": "",
-      "id": 9
-    },
-    {
-      "name": "viplav",
-      "password": "viplav123",
-      "email": "viplav@gmail.com",
-      "id": 10
     }
   ],
   "products": [
     {
       "productName": "samsung",
       "productPrice": "23000",
-      "productColor": "black",
+      "productColor": "green",
       "productCategory": "mobile",
-      "productDescription": "6gb Ram,128gb Internal",
+      "productDescription": "6gb Ram, 64gb Internal. Light in weight",
       "image": "https://media.istockphoto.com/id/1217881331/photo/man-holding-in-hands-samsung-galaxy-s20-ultra-closeup.jpg?s=612x612&w=0&k=20&c=BhMtzBJQC-D5jNfYfb6vIr4K7vV4INyZ7UzWXkI51EE=",
       "id": 1
     },
@@ -99,7 +57,7 @@
     },
     {
       "productName": "Lipstic Combo",
-      "productPrice": "299/-",
+      "productPrice": "299",
       "productColor": "Multicolour",
       "productCategory": "Lipstick",
       "productDescription": "It is a very nice combo product to buy at this price",
@@ -108,16 +66,16 @@
     },
     {
       "productName": "Sports Shoes",
-      "productPrice": "599/-",
-      "productColor": "Red",
+      "productPrice": "599",
+      "productColor": "pink",
       "productCategory": "Shoes",
-      "productDescription": "Very light weight sport running shoes ",
+      "productDescription": "Very light weight sport running shoes",
       "image": "https://cdn.pixabay.com/photo/2014/06/18/18/41/running-shoe-371624__340.jpg",
       "id": 6
     },
     {
       "productName": "Smartwatch Combo",
-      "productPrice": "2499?-",
+      "productPrice": "2499",
       "productColor": "Multicolor",
       "productCategory": "Smartwatch",
       "productDescription": "These are newly launched smartwatch combo at very affordable price",
@@ -126,7 +84,7 @@
     },
     {
       "productName": "Sony DSLR Camera",
-      "productPrice": "54999/-",
+      "productPrice": "54999",
       "productColor": "Black",
       "productCategory": "Camera",
       "productDescription": "Newly launched sony dslr s-40 camera",
@@ -135,7 +93,7 @@
     },
     {
       "productName": "College Bag",
-      "productPrice": "599/-",
+      "productPrice": "599",
       "productColor": "Red/Grey",
       "productCategory": "Bag",
       "productDescription": "Quality product",
@@ -144,8 +102,8 @@
     },
     {
       "productName": "Nike Shoes",
-      "productPrice": "2299/-",
-      "productColor": "Navy Blue",
+      "productPrice": "2299",
+      "productColor": "Black",
       "productCategory": "Shoes",
       "productDescription": "Very light in weight",
       "image": "https://cdn.pixabay.com/photo/2016/10/26/17/52/shoe-1772074__340.jpg",
@@ -153,8 +111,8 @@
     },
     {
       "productName": "Toy Car",
-      "productPrice": "2699/-",
-      "productColor": "multicolor",
+      "productPrice": "2699",
+      "productColor": "orange",
       "productCategory": "Toy",
       "productDescription": "Remote Used Car",
       "image": "https://cdn.pixabay.com/photo/2017/08/03/23/44/monster-truck-2578686__340.jpg",
@@ -162,7 +120,7 @@
     },
     {
       "productName": "Sony Camera Lense",
-      "productPrice": "34599/-",
+      "productPrice": "34599",
       "productColor": "Black",
       "productCategory": "Camera Lense",
       "productDescription": "225mp lense",
@@ -171,6 +129,61 @@
     }
   ],
   "users": [
-   
+    {
+      "name": "rajesh",
+      "password": "rejesh123",
+      "email": "rajesh@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "mangesh",
+      "password": "mangesg123",
+      "email": "mangesh@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "neha",
+      "password": "neha123",
+      "email": "neha@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "shubh",
+      "password": "shubh123",
+      "email": "shubh@gmail.com",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "productName": "samsung",
+      "productPrice": "23000",
+      "productColor": "green",
+      "productCategory": "mobile",
+      "productDescription": "6gb Ram, 64gb Internal. Light in weight",
+      "image": "https://media.istockphoto.com/id/1217881331/photo/man-holding-in-hands-samsung-galaxy-s20-ultra-closeup.jpg?s=612x612&w=0&k=20&c=BhMtzBJQC-D5jNfYfb6vIr4K7vV4INyZ7UzWXkI51EE=",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 3,
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "email": "neha@gmail.com",
+      "adress": "umred nagpur",
+      "contact": 765567665,
+      "totalPrice": 58398,
+      "userId": 3,
+      "id": 1
+    },
+    {
+      "email": "neha@gmail.com",
+      "adress": "umred nagpur",
+      "contact": 7656745345,
+      "totalPrice": 110098,
+      "userId": 3,
+      "id": 2
+    }
   ]
 }

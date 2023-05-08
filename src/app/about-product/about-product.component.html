@@ -1,26 +1,29 @@
 <div class="container-fluid main">
-    <div class="row p-5" *ngIf="seeProduct">
+    <div class="row p-5" *ngIf="productData">
         <div class="col-sm-6">
-            <img class="prodImg" src="{{seeProduct.image}}" alt="">
+            <img class="prodImg" src="{{productData.image}}" alt="">
         </div>
         <div class="col-sm-6">
          <div class="prodDetail">
-            <h1>Name:-{{seeProduct.productName}}</h1>
-            <h1>Price:-{{seeProduct.productPrice}}</h1>
+            <h1>Name:-{{productData.productName}}</h1>
+            <h1>Price:-{{productData.productPrice}}</h1>
             <div class="color">
                 Color:-
-                <h4 [style.backgroundColor]="seeProduct.productColor" class="prodColor"></h4>
+                <h4 [style.backgroundColor]="productData.productColor" class="prodColor"></h4>
             </div>
-            <h5>Category:-{{seeProduct.productCategory}}</h5>
-            <h5>Description:-{{seeProduct.productDescription}}</h5>
-            <button class="cart">Add to Cart</button>
+            <h5>Category:-{{productData.productCategory}}</h5>
+            <h5>Description:-{{productData.productDescription}}</h5>
+            <button class="cart" *ngIf="!removeCart" (click)="addToCart()">Add to Cart</button>
+            <button class="cart" *ngIf="removeCart" (click)="removeFromCart(productData.id)">Remove from Cart</button>
             <button class="m-3 buy">Buy Now</button>
             <div class="quantity">
               <button (click)="decIncQuantity('minus')">-</button>
-              <input type="text" value="{{quantity}}" name="" id="">
+              <input type="text" value="{{prodQuantity}}" name="" id="">
               <button (click)="decIncQuantity('plus')">+</button>
             </div>
          </div>
         </div>
     </div>
 </div>
+
+

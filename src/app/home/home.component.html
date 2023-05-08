@@ -1,33 +1,24 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-10 mx-2" >
-            <div id="carouselExampleControls" class="carousel slide m-3" data-bs-ride="carousel" >
+            <div id="carouselExampleControls " class="carousel slide m-3" data-bs-ride="carousel" >
                 <div class="carousel-inner"*ngIf="popularProduct" >
-                  <div class="carousel-item active " *ngFor="let list of popularProduct">
+                  <div class="carousel-item active" *ngFor="let list of popularProduct">
                     <a [routerLink]="['/about-product/'+list.id]"> <img src="{{list.image}}" class="d-block w-100 carImage" alt="...">
               </a> </div>
                    </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                  <span class="visually-hidden ">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
         </div>
         
-        <!-- <div class="col-md-6">
-            <div class="welcome m-3">
-                <h1 class="text-center text-danger ecart p-3">Welcome to Ecart</h1>
-                <h1 class="lowest mx-5">Lowest Price <br> Best Quality Products</h1>
-                <h4 class="m-4 text-info"><i class="fa-solid fa-truck mx-2"></i>Free Delivery             
-                    <span class="mx-5"><i class="fa-solid fa-sack-dollar"></i>  Cash On Delivery  </span>
-                     <span><i class="fa-sharp fa-solid fa-right-left"></i> Easy Returns</span></h4>
-                     <img class="mx-5 local" src="https://cdn.pixabay.com/photo/2014/10/28/22/19/supermarket-507295__340.jpg" alt="">
-            </div>
-            </div> -->
+     
       </div>
       <div class="row mt-2">
         <div class="col-md-11 popularProd mx-5">
@@ -37,18 +28,21 @@
     <div class="row mt-5">
       <div class="col-sm-3 mt-5" *ngFor="let list of newProduct">
         <div class="detail" >
-          <img class="image" src="{{list.image}}" alt="">
+          <img class="image image-fluid" [routerLink]="['/about-product/'+list.id]" src="{{list.image}}" alt="">
          <div class="heading">
-           <h3 class="px-5 pt-2 text-light">{{list.productName}}</h3>
+           <h3 class="px-5 pt-2 text-dark ">{{list.productName}}</h3>
          </div>
          <div class="price">
-          <h4 class="px-5 text-light">Price:- ₹{{list.productPrice}} </h4>
+          <h4 class="px-5 text-dark">Price:- ₹{{list.productPrice}} </h4>
          </div>
          <div class="searchForMore">
-          <a [routerLink]="['/about-product/'+list.id]" class="mx-2 view">View Detail</a>
-          <button type="submit" class="mx-2 buy">Buy Now</button>
-          <button type="Submit" class="mx-2 cart">Add To Cart</button>
+          <a [routerLink]="['/about-product/'+list.id]" class="mx-2 mb-2 view">View Detail</a>
+          <button type="submit" class="mx-2 mb-2 buy">Buy Now</button>
+          <button type="Submit" class="mx-2 mb-2 cart" *ngIf="!removeCart" (click)="addToCart()">Add To Cart</button>
+          <button type="Submit" class="mx-2 mb-2 cart" *ngIf="removeCart" (click)="removeFromCart(seeProduct.id)">Remove From Cart</button>
          </div>
         </div>
       </div>
 </div>
+
+

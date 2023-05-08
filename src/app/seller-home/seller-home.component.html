@@ -1,31 +1,32 @@
 
 <div class="container-fluid">
-    <h2 class="text-center text-warning">List Of The Products</h2>
-    
+    <h2 class="text-center text-dark">List Of The Products</h2>
+    <div class="t table-responsive">
 <table class="table">
     <thead>
       <tr>
-        <th class="text-light">Image</th>
-        <th class="text-light">Product Name</th>
-        <th class="text-light">Product Category</th>
-        <th class="text-light">Product Price</th>
-        <th class="text-light">Product Color</th>
-        <th class="text-light">Product Description</th>
-        <th class="text-light">Action</th>
+        <th class="text-dark">Image</th>
+        <th class="text-dark">Product Name</th>
+        <th class="text-dark">Product Category</th>
+        <th class="text-dark">Product Price</th>
+        <th class="text-dark">Product Color</th>
+        <th class="text-dark">Product Description</th>
+        <th class="text-dark">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let list of addProduct">
         <td><img src="{{list.image}}" alt=""></td>
-        <td class="text-light">{{list.productName}}</td>
-        <td class="text-light">{{list.productCategory}}</td>
-        <td class="text-light">{{list.productPrice}}</td>
-        <td class="text-light">{{list.productColor}}</td>
-        <td class="text-light">{{list.productDescription}}</td>
+        <td class="text-dark">{{list.productName}}</td>
+        <td class="text-dark">{{list.productCategory}}</td>
+        <td class="text-dark">{{list.productPrice}}</td>
+        <td class="text-dark">{{list.productColor}}</td>
+        <td class="text-dark">{{list.productDescription}}</td>
         <td><button type="button" class="mx-1" (click)="delProduct(list.id)"><i class="fa-solid fa-trash"></i></button>
            <button type="button" ><i class="fa-sharp fa-solid fa-pen-to-square" [routerLink]="['/seller-update-product/'+list.id]"></i></button></td>
       </tr>
      
     </tbody>
   </table>
+  </div>
   </div>

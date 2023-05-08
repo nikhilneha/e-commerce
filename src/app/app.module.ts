@@ -17,6 +17,9 @@ import { SellerProductUpdateComponent } from './seller-product-update/seller-pro
 import { SearchComponent } from './search/search.component';
 import { AboutProductComponent } from './about-product/about-product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { MyCartComponent } from './my-cart/my-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     SellerProductUpdateComponent,
     SearchComponent,
     AboutProductComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    MyCartComponent,
+    CheckoutComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,

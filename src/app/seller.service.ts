@@ -18,9 +18,13 @@ export class SellerService {
   {
    this.http.post("http://localhost:3000/seller",data,{observe:'response'}).subscribe((res)=>
    {
+    if(res){
+    alert("Your sign up successfully");
+    console.log(res)
     this.isSellerSignIn.next(true)
-    localStorage.setItem('seller',JSON.stringify(res.body))
+    localStorage.setItem('seller',JSON.stringify([res.body]))
     this.router.navigate(['seller-home'])
+    }
    })
   }
 
@@ -51,3 +55,5 @@ export class SellerService {
     })
   }
 }
+
+

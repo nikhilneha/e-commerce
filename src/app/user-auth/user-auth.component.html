@@ -1,26 +1,29 @@
-<div class="container" >
+<div class="container" *ngIf="!showUserLogin">
     <div class="row">
-        <div class="col-sm-6">
-          <div class="card p-3 my-5 bg-danger">
-                <h3 class="my-1 text-center register">Register Here</h3>
-          <form action="" class="form" [formGroup]="register">
+        <div class="col-sm-6" >
+          <div class="card p-3 my-5">
+                <h3 class="my-1 text-center register">User Register Here</h3>
+          <form action="" class="form" [formGroup]="userRegister">
             
             <div class="form-group mb-2">
-              <label for="" class="form-label text-light">Name:-</label>
+              <label for="" class="form-label">Name:-</label>
                <input type="text" name="name" placeholder="Enter your name" formControlName="name" class="form-control" id="">
+               <span class="text-danger" *ngIf="userRegister.get('name')?.invalid && userRegister.get('name')?.touched">Invalid Name</span>
             </div>
             <div class="form-group mb-2">
-              <label for="" class="form-label text-light">Password:-</label>
+              <label for="" class="form-label">Password:-</label>
                <input type="password" name="password" placeholder="Enter your choice Password" formControlName="password" class="form-control" id="">
+               <span class="text-danger" *ngIf="userRegister.get('password')?.invalid && userRegister.get('password')?.touched">Invalid Password</span>
             </div>
             <div class="form-group mb-2">
-              <label for="" class="form-label text-light">Email:-</label>
+              <label for="" class="form-label">Email:-</label>
                <input type="email" name="email" placeholder="Enter your email" formControlName="email" email class="form-control " id="">
+               <span class="text-danger" *ngIf="userRegister.get('email')?.invalid && userRegister.get('email')?.touched">Invalid Email</span>
             </div>
             <div class="form-group mb-2">
-             <button class="btn btn-success" (click)="signUp(register.value)">Sign-Up</button>
+             <button class="btn btn-success" [disabled]="userRegister.invalid" (click)="signUp(userRegister.value)">Sign-Up</button>
             </div>
-            <h4 class="my-1 text-light">Already have an account?<a  class="mx-1">Login</a></h4>
+            <h4 class="my-1">Already have an account?<a (click)="openUserLogin()" class="mx-1">Login</a></h4>
           </form>
               </div>
               </div>
@@ -29,3 +32,42 @@
               </div>
         </div>
     </div>
+
+
+
+
+    <div class="container" *ngIf="showUserLogin">
+      <div class="row justify-content-center">
+          <div class="col-sm-6" >
+            <div class="card p-3 my-5">
+           
+                  <h3 class="my-2 text-center login">User Sign In</h3>
+            <form action="" class="form " [formGroup]="userLogin">
+
+              <div class="form-group mb-3">
+                <label for="" class="form-label">Email:-</label>
+                 <input type="email" name="email" placeholder="Enter your email" formControlName="email" class="form-control " id="">
+                 <span class="text-danger" *ngIf="userRegister.get('email')?.invalid && userRegister.get('email')?.touched">Invalid Email</span>
+              </div>
+              <div class="form-group mb-3">
+                <label for="" class="form-label">Password:-</label>
+                 <input type="password" name="password" placeholder="Enter your choice Password" formControlName="password" class="form-control" id="">
+                 <span class="text-danger" *ngIf="userRegister.get('password')?.invalid && userRegister.get('password')?.touched">Invalid Password</span>
+              </div>
+              
+              <div class="form-group mb-3">
+               <button class="btn btn-success"  (click)="newloginUser(userLogin.value)">Login</button>
+              </div>
+              <h4 class="my-1 mb-3">Don't have an account?<a (click)="openUserSignUp()" class="mx-1">Sign-Up</a></h4>
+            </form>
+                </div>
+                </div>
+                
+                
+                <div class="col-lg-6 my-5">
+                    <img src="https://media.istockphoto.com/id/1281476617/photo/mature-man-running-online-store.jpg?s=612x612&w=is&k=20&c=ETi69f5C6GFebY5zOS_pSTNghvypMcQluG-6TP3I9rw=" alt="" class="img-fluid rounded img2">
+                </div>
+          </div>
+          </div>
+
+          

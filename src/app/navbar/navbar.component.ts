@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { product } from '../data-type';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -13,9 +14,13 @@ export class NavbarComponent implements OnInit {
   navType:string='default'
 
   sellerName:string=''
-
-  searchResult:undefined | product[]
+  userName:string=''
+  cartItem=0
+  cartLength!:number
+  searchResult:undefined|product[]
   constructor(private router:Router,private prodServe:ProductService){}
+
+  
 
   ngOnInit(): void {
     this.router.events.subscribe((res:any)=>{
@@ -23,23 +28,56 @@ export class NavbarComponent implements OnInit {
         {
           if(localStorage.getItem('seller') && res.url.includes('seller'))
           {  
-            let StoreSellerValue=localStorage.getItem('seller');
+            this.navType='seller' 
+            if(localStorage.getItem('seller'))
+            {
+              let StoreSellerValue=localStorage.getItem('seller');
             let setSellerValue= StoreSellerValue && JSON.parse(StoreSellerValue)[0]
              this.sellerName=setSellerValue.name
 
-             this.navType='seller'
-        }
+            }
+          }
+
+
+        else if(localStorage.getItem('user'))
+        {
+          this.navType='user'
+          if(localStorage.getItem('user')){
+          let storeUserValue=localStorage.getItem('user');
+          let setUserValue=storeUserValue && JSON.parse(storeUserValue)
+            this.userName=setUserValue.name
+            this.prodServe.getCartList(setUserValue.id)
+          }
+           }
           else{
             this.navType='default'
           }
-        }
+        } 
+    });
+   
+    let cartData = localStorage.getItem('localCart');
+    if(cartData)
+    {
+      this.cartItem = JSON.parse(cartData).length
+    }
+    this.prodServe.dataCart.subscribe((res)=>{
+      this.cartItem = res.length
     })
+  
   }
    logout()
    {
     localStorage.removeItem('seller');
     this.router.navigate([''])
    }
+
+   userLogout()
+   {
+    localStorage.removeItem('user')
+    this.router.navigate(['user-auth']);
+    this.prodServe.dataCart.emit([])
+   }
+
    productSearch(query:KeyboardEvent)
    {
       if(query)
@@ -67,3 +105,5 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/about-product/'+id])
   }
 }
+
+

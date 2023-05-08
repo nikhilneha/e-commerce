@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { product } from '../data-type';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,8 +10,11 @@ import { product } from '../data-type';
 })
 export class HomeComponent implements OnInit {
 
-  popularProduct:any
-  newProduct:any
+  popularProduct: undefined | product[]
+  newProduct: undefined | product[]
+  removeCart:boolean=false
+  seeProduct:any
+  prodQuantity:number=1
   constructor(private prodServe:ProductService){}
 
 ngOnInit(): void {
@@ -23,4 +27,23 @@ ngOnInit(): void {
     this.newProduct=res
   })
 }
+addToCart()
+{
+  if(this.seeProduct)
+  {
+    this.seeProduct.quantity=this.prodQuantity
+    if(!localStorage.getItem('user'))
+    {
+      this.prodServe.localAddToCart(this.seeProduct)
+      this.removeCart=true
+    }
+    
+  }
 }
+removeFromCart(productId:number)
+{
+       this.prodServe.removeItemFromCart(productId)
+       this.removeCart=false
+}
+}
+

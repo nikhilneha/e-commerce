@@ -2,26 +2,29 @@
 <div class="container" *ngIf="!showLogin">
     <div class="row">
         <div class="col-sm-6">
-          <div class="card p-3 my-5 bg-danger">
+          <div class="card p-3 my-5">
                 <h3 class="my-1 text-center register">Register Here</h3>
           <form action="" class="form " [formGroup]="register">
             
             <div class="form-group mb-2">
-              <label for="" class="form-label text-light">Name:-</label>
+              <label for="" class="form-label">Name:-</label>
                <input type="text" name="name" placeholder="Enter your name" formControlName="name" class="form-control" id="">
+               <span class="text-danger" *ngIf="register.get('name')?.invalid && register.get('name')?.touched">Invalid Name</span>
             </div>
             <div class="form-group mb-2">
-              <label for="" class="form-label text-light">Password:-</label>
+              <label for="" class="form-label">Password:-</label>
                <input type="password" name="password" placeholder="Enter your choice Password" formControlName="password" class="form-control" id="">
+               <span class="text-danger" *ngIf="register.get('password')?.invalid && register.get('password')?.touched">Invalid Password</span>
             </div>
             <div class="form-group mb-2">
-              <label for="" class="form-label text-light">Email:-</label>
+              <label for="" class="form-label">Email:-</label>
                <input type="email" name="email" placeholder="Enter your email" formControlName="email" email class="form-control " id="">
+               <span class="text-danger" *ngIf="register.get('email')?.invalid && register.get('email')?.touched">Invalid Email</span>
             </div>
             <div class="form-group mb-2">
              <button class="btn btn-success" (click)="userSignUp(register.value)">Sign-Up</button>
             </div>
-            <h4 class="my-1 text-light">Already have an account?<a (click)="openLogin()" class="mx-1">Login</a></h4>
+            <h4 class="my-1">Already have an account?<a (click)="openLogin()" class="mx-1">Login</a></h4>
           </form>
               </div>
               </div>
@@ -31,30 +34,32 @@
         </div>
     </div>
     
-  <!--Login Form Is Below-->  
+ 
 
     
  <div class="container" *ngIf="showLogin">
       <div class="row justify-content-center">
           <div class="col-sm-6">
-            <div class="card p-3 my-5 bg-secondary">
+            <div class="card p-3 my-5">
            
                   <h3 class="my-2 text-center login">Sign In</h3>
             <form action="" class="form " [formGroup]="login">
 
               <div class="form-group mb-3">
-                <label for="" class="form-label text-light">Email:-</label>
+                <label for="" class="form-label">Email:-</label>
                  <input type="email" name="email" placeholder="Enter your email" formControlName="email" class="form-control " id="">
+                 <span class="text-danger" *ngIf="register.get('email')?.invalid && register.get('email')?.touched">Invalid Email</span>
               </div>
               <div class="form-group mb-3">
-                <label for="" class="form-label text-light">Password:-</label>
+                <label for="" class="form-label">Password:-</label>
                  <input type="password" name="password" placeholder="Enter your choice Password" formControlName="password" class="form-control" id="">
+                 <span class="text-danger" *ngIf="register.get('password')?.invalid && register.get('password')?.touched">Invalid Password</span>
               </div>
               
               <div class="form-group mb-3">
                <button class="btn btn-success" (click)="userLogin()">Login</button>
               </div>
-              <h4 class="my-1 text-light mb-3">Don't have an account?<a (click)="openSignUp()" class="mx-1">Sign-Up</a></h4>
+              <h4 class="my-1 mb-3">Don't have an account?<a (click)="openSignUp()" class="mx-1">Sign-Up</a></h4>
             </form>
                 </div>
                 </div>
@@ -66,3 +71,5 @@
           </div>
           </div>
   
+
+   

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { product } from '../data-type';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   constructor(private prodServe:ProductService,private activateroute:ActivatedRoute){}
 
-  result:any
+  result:undefined | product[]
  
   ngOnInit(): void {
      let query=this.activateroute.snapshot.paramMap.get('query')
@@ -22,3 +23,4 @@ export class SearchComponent implements OnInit {
 
   }
 }
+
